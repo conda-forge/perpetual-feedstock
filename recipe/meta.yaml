@@ -1,5 +1,5 @@
 {% set name = "perpetual" %}
-{% set version = "0.6.2" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perpetual-{{ version }}.tar.gz
-  sha256: a58333e8ecee37297d35b0d3af2e1f1bd01f3d945d3820ffd00e39a1533b1d38
+  sha256: f4e5782723c03e02c300ed9339e4a4133988564aac7eb7df381c8b1cc52fc1a6
 
 build:
-  skip: True  # [py<39]
+  skip: true  # [py<39]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
