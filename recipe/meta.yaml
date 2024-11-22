@@ -24,7 +24,8 @@ requirements:
     - cargo-bundle-licenses
   host:
     - python
-    - maturin >=1.0.0,<1.7.0
+    # Pinned under 1.6.0 as somehow maturin couldn't find cargo.toml >1.6.0
+    - maturin >=1.0.0,<1.6.0
     - pip
   run:
     - python
