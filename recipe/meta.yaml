@@ -1,5 +1,5 @@
 {% set name = "perpetual" %}
-{% set version = "0.7.6" %}
+{% set version = "0.7.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perpetual-{{ version }}.tar.gz
-  sha256: 86072fe94e754628eaadb9ef0086aaa74d8da2cfb4729d708c50479834619b19
+  sha256: 7669534477b84bf8b360e79905bc4ce7377a1214a6c583671099839432bc58c0
 
 build:
   skip: true  # [py<39]
