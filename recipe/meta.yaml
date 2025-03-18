@@ -12,6 +12,7 @@ source:
 build:
   skip: true  # [py<39]
   script:
+    - cd python-package  # [not win]
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
