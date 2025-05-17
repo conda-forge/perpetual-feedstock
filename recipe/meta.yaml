@@ -46,7 +46,7 @@ about:
   summary: A self-generalizing gradient boosting machine which doesn't need hyperparameter optimization
   license: AGPL-3.0-only
   license_file:
-    - LICENSE
+    - python-package/LICENSE
     - THIRDPARTY.yml
 
 extra:
