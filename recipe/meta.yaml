@@ -6,10 +6,10 @@ package:
   version: {{ version }}
 
 source:
-  url:
-    - https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perpetual-{{ version }}.tar.gz
-    - https://raw.githubusercontent.com/perpetual-ml/perpetual/refs/tags/v{{ version }}/LICENSE
-  sha256: f1dba24e88dc38cd666a9f3e25560ae5b94a004c107451367565666d02647717
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perpetual-{{ version }}.tar.gz
+    sha256: f1dba24e88dc38cd666a9f3e25560ae5b94a004c107451367565666d02647717
+  - url: https://raw.githubusercontent.com/perpetual-ml/perpetual/refs/tags/v{{ version }}/LICENSE
+    sha256: 8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b
 
 build:
   skip: true  # [py<39]
