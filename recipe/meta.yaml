@@ -6,7 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perpetual-{{ version }}.tar.gz
+  url:
+    - https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/perpetual-{{ version }}.tar.gz
+    - https://raw.githubusercontent.com/perpetual-ml/perpetual/refs/tags/v{{ version }}/LICENSE
   sha256: f1dba24e88dc38cd666a9f3e25560ae5b94a004c107451367565666d02647717
 
 build:
@@ -47,6 +49,7 @@ about:
   license: AGPL-3.0-only
   license_file:
     - THIRDPARTY.yml
+    - LICENSE
 
 extra:
   recipe-maintainers:
