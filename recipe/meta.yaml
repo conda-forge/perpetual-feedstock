@@ -50,6 +50,7 @@ about:
   license: AGPL-3.0-only
   license_file:
     - THIRDPARTY.yml
+    - LICENSE.txt
 
 extra:
   recipe-maintainers:
