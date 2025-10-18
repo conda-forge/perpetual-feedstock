@@ -10,7 +10,6 @@ source:
   sha256: 7539bfbc79c6c51b096fd478e521a20db78a8bf693756bdcffcc812a5225d4c6
 
 build:
-  skip: true  # [py<39]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -24,7 +23,7 @@ requirements:
     - cargo-bundle-licenses
   host:
     - python
-    - maturin >=1.0.0,<1.7.0
+    - maturin >=1.0.0,<2.0
     - pip
   run:
     - python
