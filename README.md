@@ -3,7 +3,7 @@ About perpetual-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/perpetual-feedstock/blob/main/LICENSE.txt)
 
-Home: https://perpetual-ml.com
+Home: https://perpetual-ml.com/
 
 Package license: AGPL-3.0-only
 
