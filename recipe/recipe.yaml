@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: perpetual
+  version: 1.0.25
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/perpetual-${{ version }}.tar.gz
+  sha256: 53cb6681cbdca7015762fe01660e1bb08478bd3d22dd231717966ee89565b0a0
+
+build:
+  number: 0
+  script:
+    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - ${{ stdlib('c') }}
+    - ${{ compiler('c') }}
+    - ${{ compiler('rust') }}
+    - cargo-bundle-licenses
+  host:
+    - python
+    - maturin >=1.0,<2.0
+    - pip
+  run:
+    - python
+    - numpy
+    - typing_extensions
+
+tests:
+  - python:
+      imports:
+        - perpetual
+      pip_check: true
+
+about:
+  summary: A self-generalizing gradient boosting machine which doesn't need hyperparameter optimization
+  license: AGPL-3.0-only
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  homepage: https://perpetual-ml.com
+  repository: https://github.com/perpetual-ml/perpetual
+  documentation: https://perpetual-ml.github.io/perpetual/
+
+extra:
+  recipe-maintainers:
+    - thewchan
+    - deadsoul44
