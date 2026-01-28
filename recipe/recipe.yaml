@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: perpetual
-  version: 1.0.25
+  version: "1.0.43"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/perpetual-${{ version }}.tar.gz
-  sha256: 53cb6681cbdca7015762fe01660e1bb08478bd3d22dd231717966ee89565b0a0
+  sha256: a55a36d7769d689d1880f55dbbd73e74dcd524141bf84f58d0cabbb54960cb98
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
