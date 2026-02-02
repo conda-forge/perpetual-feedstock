@@ -32,6 +32,8 @@ requirements:
     - python
     - numpy
     - typing_extensions
+    # Not listed upstream but needed to past import
+    - scikit-learn
 
 tests:
   - python:
