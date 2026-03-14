@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: perpetual
-  version: "2.0.0"
+  version: "2.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/perpetual-${{ version }}.tar.gz
-  sha256: d23be510db764a2983c7bb972193f0064e38e4a0e4e2c2d2a2e3f530464e1476
+  sha256: a4c4aa4c67abe111b1e089108260e9c47430d58c81b2b88a07e9e57ca5f85002
 
 build:
   number: 0
